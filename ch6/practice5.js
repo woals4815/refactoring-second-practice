@@ -13,6 +13,10 @@ let someCustomers = [];
 
 function inNewEngland(aCustomer) {
   const statusCode = aCustomer.address.state;
+  return NEWinNewEngland(statusCode);
+}
+
+function NEWinNewEngland(stateCode) {
   return ['MA', 'CT'].includes(statusCode);
 }
 
