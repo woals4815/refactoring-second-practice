@@ -8,3 +8,11 @@ class Book {
     this._reservations.push(customer);
   }
 }
+
+let someCustomers = [];
+
+function inNewEngland(aCustomer) {
+  return ['MA', 'CT'].includes(aCustomer.address.state);
+}
+
+const newEnglanders = someCustomers.filter((c) => inNewEngland(c));
