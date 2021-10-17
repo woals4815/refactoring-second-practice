@@ -12,7 +12,8 @@ class Book {
 let someCustomers = [];
 
 function inNewEngland(aCustomer) {
-  return ['MA', 'CT'].includes(aCustomer.address.state);
+  const statusCode = aCustomer.address.state;
+  return ['MA', 'CT'].includes(statusCode);
 }
 
 const newEnglanders = someCustomers.filter((c) => inNewEngland(c));
