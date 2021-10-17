@@ -1,9 +1,7 @@
 function printOwing(invoice) {
   let outstanding = 0;
 
-  console.log('**************');
-  console.log('고객채무');
-  console.log('**************');
+  printBanner();
 
   for (const o of invoice.orders) {
     outstanding += o.amount;
@@ -19,4 +17,10 @@ function printOwing(invoice) {
   console.log(`customer: ${invoice.customer}`);
   console.log(`amount: ${outstanding}`);
   console.log(`Due date: ${invoice.dueDate.toLocaleDateString()}`);
+}
+
+function printBanner() {
+  console.log('**************');
+  console.log('고객채무');
+  console.log('**************');
 }
