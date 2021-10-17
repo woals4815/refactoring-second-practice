@@ -14,9 +14,13 @@ function printOwing(invoice) {
     today.getDate() + 30
   );
 
-  console.log(`customer: ${invoice.customer}`);
-  console.log(`amount: ${outstanding}`);
-  console.log(`Due date: ${invoice.dueDate.toLocaleDateString()}`);
+  printDetails();
+
+  function printDetails() {
+    console.log(`customer: ${invoice.customer}`);
+    console.log(`amount: ${outstanding}`);
+    console.log(`Due date: ${invoice.dueDate.toLocaleDateString()}`);
+  }
 }
 
 function printBanner() {
