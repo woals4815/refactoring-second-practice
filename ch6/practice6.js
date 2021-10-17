@@ -2,7 +2,7 @@ let spaceship = { name: 'victory' };
 
 let defaultOwner = { firsName: 'martin', lastname: 'pauler' };
 
-spaceship.owner = defaultOwner;
+spaceship.owner = getDefaultOnwer();
 
 function getDefaultOnwer() {
   return defaultOwner;
