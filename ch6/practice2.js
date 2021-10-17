@@ -1,7 +1,8 @@
 function reportLines(aCustomer) {
   const lines = [];
-
+  lines.push(['name', aCustomer.name]);
   gatherCustomerData(lines, aCustomer);
+
   return lines;
 }
 
