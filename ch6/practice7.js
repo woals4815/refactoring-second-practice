@@ -33,9 +33,4 @@ const range = new NumberRange(
   operatingPlan.temperatureCeiling
 );
 
-alerts = readingsOutsideRange(
-  station,
-  operatingPlan.temperatureFloor,
-  operatingPlan.temperatureCeiling,
-  range
-);
+alerts = readingsOutsideRange(station, operatingPlan.temperatureFloor, range);
