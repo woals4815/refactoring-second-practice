@@ -31,5 +31,6 @@ function readingsOutsideRange(station, min, max, range) {
 alerts = readingsOutsideRange(
   station,
   operatingPlan.temperatureFloor,
-  operatingPlan.temperatureCeiling
+  operatingPlan.temperatureCeiling,
+  null
 );
