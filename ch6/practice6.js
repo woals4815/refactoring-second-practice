@@ -1,13 +1,13 @@
 let spaceship = { name: 'victory' };
 
-let defaultOwner = { firsName: 'martin', lastname: 'pauler' };
+let defaultOwnerData = { firsName: 'martin', lastname: 'pauler' };
 
-spaceship.owner = getDefaultOnwer();
+spaceship.owner = defaultOnwer();
 
-function getDefaultOnwer() {
+function defaultOnwer() {
   return defaultOwner;
 }
 
 function setDefaultOnwer(arg) {
-  defaultOwner = arg;
+  defaultOwnerData = arg;
 }
