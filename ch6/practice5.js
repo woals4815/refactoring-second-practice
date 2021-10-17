@@ -13,7 +13,7 @@ let someCustomers = [];
 
 function inNewEngland(aCustomer) {
   const statusCode = aCustomer.address.state;
-  return NEWinNewEngland(statusCode);
+  return NEWinNewEngland(aCustomer.address.state);
 }
 
 function NEWinNewEngland(stateCode) {
