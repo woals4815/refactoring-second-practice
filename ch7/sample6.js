@@ -18,8 +18,11 @@ class TrackingInformation {
 }
 
 class Shipment {
+  constructor() {
+    this._trackingInformation = new TrackingInformation();
+  }
   get trackingInfo() {
-    return this._trackingInformation.display;
+    return `${this.shippingCompany}: ${this.trackingNumber}`;
   }
   get trackingInformation() {
     return this._trackingInformation;
@@ -27,4 +30,15 @@ class Shipment {
   set trackingInformation(aTrackingInformation) {
     this._trackingInformation = aTrackingInformation;
   }
+  get shippingCompany() {
+    return this._shippingCompany;
+  }
+  set shippingCompany(arg) {
+    this._shippingCompany = arg;
+  }
 }
+
+const aShipment = new Shipment();
+
+//client Example
+aShipment.shippingCompany = request.vendor;
