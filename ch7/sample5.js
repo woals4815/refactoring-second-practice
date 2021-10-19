@@ -9,38 +9,41 @@ class Person {
     this._name = arg;
   }
   get telephoneNumber() {
-    return this._telephoneNumber.telephoneNumber;
+    return this._telephoneNumber.toString();
   }
   get officeAreaCode() {
-    return this._telephoneNumber.officeAreaCode;
+    return this._telephoneNumber.areaCode;
   }
   set officeAreaCode(arg) {
-    this._telephoneNumber.officeAreaCode = arg;
+    this._telephoneNumber.areaCode = arg;
   }
   get officeNumber() {
-    return this._officeNumber;
+    return this._telephoneNumber.number;
   }
   set officeNumber(arg) {
-    this._officeNumber = arg;
+    this._telephoneNumber.number = arg;
   }
 }
 
 class TelephoneNumber {
-  get officeAreaCode() {
-    return this._officeAreaCode;
+  get areaCode() {
+    return this._areaCode;
   }
-  set officeAreaCode(arg) {
-    this._officeAreaCode = arg;
+  set areaCode(arg) {
+    this._areaCode = arg;
   }
 
-  get officeNumber() {
-    return this._officeNumber;
+  get number() {
+    return this._number;
   }
   set officeNumber(arg) {
-    this._officeNumber = arg;
+    this._number = arg;
   }
 
   get telephoneNumber() {
     return `(${this.officeAreaCode}) ${this.officeNumber}`;
+  }
+  toString() {
+    return `(${this.areaCode}) ${this.number}`;
   }
 }
